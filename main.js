@@ -75,7 +75,7 @@ function renderContent() {
 
         contentRef.insertAdjacentHTML(
           "beforeend",
-          `<li data-source="${item.url}">${item.name || item.title}</li>`
+          `<li data-source="${url}">${item.name || item.title}</li>`
         );
       });
       loadMoreBtn.show();
