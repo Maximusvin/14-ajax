@@ -71,6 +71,8 @@ function renderContent() {
   fetchApi().then((results) => {
     if (results.length !== 0) {
       results.forEach((item) => {
+        const url = `https${item.url.slice(4)}`;
+
         contentRef.insertAdjacentHTML(
           "beforeend",
           `<li data-source="${item.url}">${item.name || item.title}</li>`
