@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14. Ajax</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Оберіть напрямок пошуку</h2>
+      <form class="form">
+        <input type="text" placeholder="Введіть пошуковий запит" />
+        <select id="select">
+          <option value="films">films</option>
+          <option value="people">people</option>
+          <option value="planets">planets</option>
+          <option value="species">species</option>
+          <option value="starships">starships</option>
+          <option value="vehicles">vehicles</option>
+        </select>
+        <button type="submit">Пошук</button>
+      </form>
+
+      <ul class="content"></ul>
+      <span class="span"></span>
+
+      <button
+        id="load-more"
+        type="button"
+        class="btn load-more is-hidden"
+        data-action="load-more"
+      >
+        <span
+          class="spinner-border spinner-border-sm spiner is-hidden"
+          role="status"
+          aria-hidden="true"
+        ></span>
+        <span class="label">Load More</span>
+      </button>
+
+      <div class="backdrop">
+        <div class="modal">
+          <div class="close">
+            <span class="closw-span1"></span>
+            <span class="closw-span2"></span>
+          </div>
+          <h3 class="modal-title"></h3>
+          <div class="content-modal">
+            <ul class="list1"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
